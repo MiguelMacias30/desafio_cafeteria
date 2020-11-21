@@ -1,0 +1,2 @@
+module CoffesHelper
+end
