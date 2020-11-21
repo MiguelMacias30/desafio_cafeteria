@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Coffe.destroy_all
+
+1000.times do
+Coffe.create(
+  name:Faker::Coffee.blend_name,
+  origin: rand(1..12),
+  price: rand(400..1200)
+)

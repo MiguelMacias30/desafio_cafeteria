@@ -1,2 +1,23 @@
-<h1>Coffes#index</h1>
-<p>Find me in app/views/coffes/index.html.erb</p>
+<h1>Cafes</h1>
+
+<%= column_chart @origin, title: 'origen del cafe' %>
+
+<%= pie_chart @price, title: 'precio del cafe' %>
+<%= pie_chart @coffe, title: 'nombre del cafe' %>
+
+<table>
+	<thead>
+		<th>Nombre</th>
+		<th>origen</th>
+		<th>precio</th>
+	</thead>
+	<tbody>
+		<% @coffes.each do |coffe| %>
+            <tr>
+            	<td><%= coffe.name %></td>
+            	<td><%= coffe.price</td>
+            	<td><%= coffe.origin %></td>
+            </tr>
+		<% end %>
+	</tbody>
+</table>
