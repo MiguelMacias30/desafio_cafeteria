@@ -3,6 +3,6 @@ class CoffesController < ApplicationController
     @coffes = Coffe.all
     @coffe = query.count(:name)
     @price = query.count(:price)
-    @origin = query.count(:origin)
+    @origin = query.count(:Origin)
   end
 end

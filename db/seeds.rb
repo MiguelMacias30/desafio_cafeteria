@@ -11,6 +11,7 @@ Coffe.destroy_all
 1000.times do
 Coffe.create(
   name:Faker::Coffee.blend_name,
-  origin: rand(1..12),
+  Origin: rand(1..12),
   price: rand(400..1200)
 )
+end
